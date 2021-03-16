@@ -11,10 +11,13 @@ const server =
 
       res.write('<html> <head> <title> Served </title> </head>')
       res.write('<body>')
-      res.write('Content \n')
-      res.write('More content \n')
-      res.write('Hello World')    
-      res.end('</body></html>')
+      res.write('<table>')
+      res.write('<tr><th>Location</th><th>Number of hours</th><th>Estimated cost</th></tr>')
+      res.write('<tr><td>South Island, New Zealand</td><td>7 Days</td><td>$100/day</td></tr>')  
+      res.write('<tr><td>Paris</td><td>3-4 days</td><td>$150/day</td></tr>')  
+      res.write('<tr><td>Bora Bora</td><td>5 days</td><td>$200/day</td></tr>')
+      res.write('<tr><td>Glacier National Park</td><td>4 days</td><td>$100/day</td></tr>')
+      res.end('</table></body></html>')
       //Close the response
     }                           
 )
