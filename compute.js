@@ -21,14 +21,14 @@ const server =
        
           console.log("Look for query parameter data: " + search_params.get("data"))
 
-          let number1=search_params.get("data1")
-          let number2=10
+          let number1=search_params.get("number1")
+          //let number2=search_params.get("number2")
 
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
           res.write(`cube root of(${number1}) is ${Math.cbrt(number1)}\n`)
-          res.write(`cube root of(${number2}) is ${Math.cbrt(number2)}\n`)
+          //res.write(`cube root of(${number2}) is ${Math.cbrt(number2)}\n`)
           res.end();
         
       } else {
