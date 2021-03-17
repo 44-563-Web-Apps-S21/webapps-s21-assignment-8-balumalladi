@@ -11,7 +11,7 @@ const server =
 
       res.write('<html> <head> <title> Served </title> </head>')
       res.write('<body>')
-      res.write('<table>')
+      res.write('<table border=1>')
       res.write('<tr><th>Location</th><th>Number of hours</th><th>Estimated cost</th></tr>')
       res.write('<tr><td>South Island, New Zealand</td><td>7 Days</td><td>$100/day</td></tr>')  
       res.write('<tr><td>Paris</td><td>3-4 days</td><td>$150/day</td></tr>')  
