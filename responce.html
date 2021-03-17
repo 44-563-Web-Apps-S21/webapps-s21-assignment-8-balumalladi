@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Response page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>ADVICES BY BALU MALLADI</h1>
+        <h4>Click on the button to get advice</h4>
+        <div>
+            <button onclick="getAdvice()">Get Advice</button>
+        </div>
+    </div>
+
+    <div id="Advices">Advices are shown here</div>
+    <script>
+        const getAdvice = () => {
+            fetch('http://127.0.0.1:3001').then(
+                (res) => {
+                    console.log(res)
+                    return res.text()
+                }
+            ).then(data => {
+            
+                console.log(data)
+                document.getElementById("Advices").innerHTML = data
+            }).catch(err => {
+                document.getElementById("Advices").innerHTML = err
+            })
+        }
+    </script>
+</body>
+</html>
